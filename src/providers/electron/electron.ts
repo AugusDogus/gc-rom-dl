@@ -1,6 +1,12 @@
+declare global {
+  interface Window { require: any; }
+}
+
 import { Injectable } from '@angular/core';
 const electron = window.require('electron');
 const {dialog} = window.require('electron').remote;
+
+
 @Injectable()
 export class ElectronProvider {
 
