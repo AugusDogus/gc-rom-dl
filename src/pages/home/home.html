@@ -1,17 +1,32 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title>GameCube ROM downloader</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+  <!--<ion-item>-->
+    <!--<ion-input type="text" (keyup.enter)="search()" [(ngModel)]="query"></ion-input>-->
+  <!--</ion-item>-->
+  <ion-item>
+    <ion-input type="text" (keyup.enter)="search()" [(ngModel)]="query" placeholder="Mario"></ion-input>
+    <button clear ion-button item-right (click)="search()">Search</button>
+  </ion-item>
+  <!--<button ion-button (click)="search()">Search</button>-->
+  <!--<button ion-button (click)="download()">Download</button>-->
+  <div *ngIf="games.length > 0" class="games">
+    <ng-container *ngFor="let game of games">
+      <div class="game" *ngIf="game.image; else noGames()">
+        <div class="column">
+          <img class="poster" src={{game.image}} (click)="viewGame(game)">
+          <img class="flag flag-{{game.flag}}">
+          <span class="game-name">{{game.name}}</span>
+        </div>
+      </div>
+    </ng-container>
+    <div class="filling-empty-space-childs"></div>
+    <div class="filling-empty-space-childs"></div>
+    <div class="filling-empty-space-childs"></div>
+  </div>
+
 </ion-content>

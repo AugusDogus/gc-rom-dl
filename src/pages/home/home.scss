@@ -1,3 +1,77 @@
 page-home {
+  ::-webkit-scrollbar,
+  *::-webkit-scrollbar {
+    display: none;
+  }
+
+  .games{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: row;
+    //flex-wrap: wrap;
+    //justify-content: center;
+  }
+
+  .game{
+
+  }
+
+  .column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .poster{
+    margin: 1em;
+    height: 10em;
+    width: 8.25em;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  }
+
+  .poster:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    cursor: pointer;
+  }
+
+  .flag {
+    width: 16px;
+    height: 11px;
+    background: url('../assets/imgs/flags.png') no-repeat;
+  }
+
+  ion-content {
+    position: relative;
+  }
+
+  .spinner{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .flag.flag-us {
+    background-position: -16px 0;
+  }
+
+  .flag.flag-eu {
+    background-position: 0 0;
+  }
+
+  .game-name{
+    padding-top: .4em;
+    max-width: 8.25em;
+    text-align: center;
+  }
+
+  .filling-empty-space-childs {
+    width:8.25em; /*the width of the images in this example*/
+    margin: 1em;
+    height:0; /*Important! for the divs to collapse should they fall in a new row*/
+  }
 
 }
