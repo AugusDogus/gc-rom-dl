@@ -46,5 +46,4 @@ export class ModalPage {
     }).present();
   }
 
-  '800x650'
 }
