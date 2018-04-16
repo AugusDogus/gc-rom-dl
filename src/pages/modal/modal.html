@@ -2,35 +2,16 @@
   <div class="spinner-wrapper">
     <ion-spinner class="spinner-new" *ngIf="spinnerOn"></ion-spinner>
   </div>
-
-  <!--<div *ngIf="newGame" class="container">-->
-    <!--<div class="item game-name">-->
-      <!--<h1>{{oldGame.name}}</h1>-->
-    <!--</div>-->
-    <!--<div class="item game-image">-->
-      <!--<img src="{{newGame.image}}">-->
-    <!--</div>-->
-    <!--<div class="item game-download">-->
-      <!--<ion-icon name="cloud-download"></ion-icon>-->
-    <!--</div>-->
-  <!--</div>-->
-
-  <div *ngIf="!downloaded" class="corner-ribbon bottom-right sticky red shadow">Not Downloaded</div>
-  <div *ngIf="downloading" class="corner-ribbon bottom-right sticky orange">Downloading</div>
-  <div *ngIf="downloaded" class="corner-ribbon bottom-right sticky green shadow">Downloaded</div>
-
-
+  <div *ngIf="!downloaded && newGame" class="corner-ribbon bottom-right sticky red shadow">Not Downloaded</div>
+  <div *ngIf="downloading && newGame" class="corner-ribbon bottom-right sticky orange">Downloading</div>
+  <div *ngIf="downloaded && newGame" class="corner-ribbon bottom-right sticky green shadow">Downloaded</div>
   <div class="equal-height-container" *ngIf="newGame">
     <div class="first">
       <img src="{{newGame.image}}">
     </div>
-
     <div class="second">
       <div class="second-a">{{oldGame.name}}</div>
       <div class="second-b"><ion-icon (click)="download()" name="cloud-download"></ion-icon></div>
     </div>
   </div>
-
-
-
 </ion-content>

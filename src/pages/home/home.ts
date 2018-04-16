@@ -9,6 +9,7 @@ import { ModalPage } from '../modal/modal';
   selector: 'page-home',
   templateUrl: 'home.html'
 })
+
 export class HomePage {
 
   public query: string;
@@ -23,6 +24,7 @@ export class HomePage {
     public events: Events,
     public modalCtrl: ModalController,
   ) {}
+
   search(){
     this.spinnerOn = true;
     this.games = [];

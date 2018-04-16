@@ -3,11 +3,11 @@ import { NavController, NavParams, ToastController } from 'ionic-angular';
 import { LoveromsProvider } from "../../providers/loveroms/loveroms";
 import { ElectronProvider } from "../../providers/electron/electron";
 
-
 @Component({
   selector: 'page-modal',
   templateUrl: 'modal.html',
 })
+
 export class ModalPage {
 
   public spinnerOn = true;
@@ -16,8 +16,13 @@ export class ModalPage {
   public downloaded = false;
   public downloading = false;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public loveroms: LoveromsProvider, public toastCtrl: ToastController, public electron: ElectronProvider) {
-  }
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    public loveroms: LoveromsProvider,
+    public toastCtrl: ToastController,
+    public electron: ElectronProvider
+  ) {}
 
   ionViewDidLoad(){
     this.oldGame = this.navParams.get('game');

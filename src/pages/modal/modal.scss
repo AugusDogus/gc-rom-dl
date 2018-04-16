@@ -12,16 +12,13 @@ page-modal {
     margin: 0 auto;
     display: flex;
   }
-
   .first {
     flex: 1;
   }
-
   img{
     width: 20em;
     height: 33.5em;
   }
-
   .second {
     flex: 1;
     display: flex;
@@ -31,21 +28,17 @@ page-modal {
     font-size: 2em;
     padding-left: .3em;
   }
-
   .second-a {
     text-align: center;
     order: 1
   }
-
   .second-b {
     order: 2;
     font-size: 3.5em;
   }
-
   ion-icon:hover{
     cursor: pointer;
   }
-
   .corner-ribbon{
     width: 200px;
     background: #e43;
@@ -59,24 +52,18 @@ page-modal {
     transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
   }
-
   .corner-ribbon.sticky{
     position: fixed;
   }
-
   .corner-ribbon.shadow{
     box-shadow: 0 0 3px rgba(0,0,0,.3);
   }
-
-  /* Different positions */
-
   .corner-ribbon.top-left{
     top: 25px;
     left: -50px;
     transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
   }
-
   .corner-ribbon.top-right{
     top: 25px;
     right: -50px;
@@ -84,7 +71,6 @@ page-modal {
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
   }
-
   .corner-ribbon.bottom-left{
     top: auto;
     bottom: 25px;
@@ -92,7 +78,6 @@ page-modal {
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
   }
-
   .corner-ribbon.bottom-right{
     top: auto;
     right: -50px;
@@ -101,9 +86,6 @@ page-modal {
     transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
   }
-
-  /* Colors */
-
   .corner-ribbon.white{background: #f0f0f0; color: #555;}
   .corner-ribbon.black{background: #333;}
   .corner-ribbon.grey{background: #999;}
@@ -114,7 +96,4 @@ page-modal {
   .corner-ribbon.red{background: #e43;}
   .corner-ribbon.orange{background: #e82;}
   .corner-ribbon.yellow{background: #ec0;}
-
-
-
 }
